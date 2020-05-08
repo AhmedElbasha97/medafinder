@@ -1,0 +1,6 @@
+framework module Pods_RegestrationApp_RegestrationAppUITests {
+  umbrella header "Pods-RegestrationApp-RegestrationAppUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

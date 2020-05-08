@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ByP-Ew-5CE">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="msc-7A-UZg">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vcY-34-yAS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController id="ByP-Ew-5CE" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" badgeValue="media" systemItem="search" id="jpe-ZF-Wg4"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="EBf-h3-LYa">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="pw8-ZY-ATR"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-1233" y="39"/>
+        </scene>
+        <!--Media Table-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="MediaTable" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="MediaTable" customModule="RegestrationApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="VS7-5T-uPq">
+                                <rect key="frame" x="0.0" y="88" width="414" height="62.5"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="mSC-Zn-civ">
+                                <rect key="frame" x="0.0" y="150" width="414" height="39"/>
+                                <segments>
+                                    <segment title="All"/>
+                                    <segment title="Songs"/>
+                                    <segment title="Movie"/>
+                                    <segment title="TV-Show"/>
+                                </segments>
+                                <color key="tintColor" red="0.57919406890000003" green="0.1280144453" blue="0.57268613580000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </segmentedControl>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="W8q-IH-xUP">
+                                <rect key="frame" x="0.0" y="196" width="414" height="627"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" red="0.57919406890000003" green="0.1280144453" blue="0.57268613580000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="W8q-IH-xUP" firstAttribute="top" secondItem="mSC-Zn-civ" secondAttribute="bottom" constant="8" id="2q1-r6-fps"/>
+                            <constraint firstItem="VS7-5T-uPq" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="5cg-4H-RHv"/>
+                            <constraint firstItem="mSC-Zn-civ" firstAttribute="leading" secondItem="VS7-5T-uPq" secondAttribute="leading" id="8bs-hc-DeW"/>
+                            <constraint firstItem="mSC-Zn-civ" firstAttribute="height" secondItem="VS7-5T-uPq" secondAttribute="height" multiplier="0.6" id="AKV-Qx-RUy"/>
+                            <constraint firstItem="W8q-IH-xUP" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="GyU-zx-yY3"/>
+                            <constraint firstItem="W8q-IH-xUP" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.7" id="Qau-wQ-JtE"/>
+                            <constraint firstItem="VS7-5T-uPq" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="TN8-59-Rqh"/>
+                            <constraint firstItem="VS7-5T-uPq" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.07" id="XZD-ja-w0o"/>
+                            <constraint firstItem="mSC-Zn-civ" firstAttribute="width" secondItem="VS7-5T-uPq" secondAttribute="width" id="ZIi-zw-wbo"/>
+                            <constraint firstItem="mSC-Zn-civ" firstAttribute="top" secondItem="VS7-5T-uPq" secondAttribute="bottom" constant="-0.5" id="h6s-Kn-Sex"/>
+                            <constraint firstItem="W8q-IH-xUP" firstAttribute="leading" secondItem="mSC-Zn-civ" secondAttribute="leading" id="p8c-Zq-bzW"/>
+                            <constraint firstItem="W8q-IH-xUP" firstAttribute="leading" secondItem="VS7-5T-uPq" secondAttribute="leading" id="r2f-a0-BGo"/>
+                            <constraint firstItem="VS7-5T-uPq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rt0-j6-wWh"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="hrb-QI-Xoi"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="searchMedia" destination="VS7-5T-uPq" id="LRL-v8-1iq"/>
+                        <outlet property="selectedScope" destination="mSC-Zn-civ" id="KFh-0h-Xpa"/>
+                        <outlet property="tableView" destination="W8q-IH-xUP" id="Lmp-Mt-e6q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="96.428571428571431"/>
+        </scene>
+    </scenes>
+</document>
